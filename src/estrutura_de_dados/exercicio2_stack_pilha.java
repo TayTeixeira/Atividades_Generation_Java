@@ -58,7 +58,7 @@ while(true) {
 					for(String client : stack) {
 						System.out.println(client);
 					}
-					System.out.println("\nO Um livro foi retirado da pilha!");
+					System.out.println("\nUm livro foi retirado da pilha!");
 				}else {
 					System.out.println("A pilha está vazia!");
 				}
