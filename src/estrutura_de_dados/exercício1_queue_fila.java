@@ -16,7 +16,8 @@ public class exercício1_queue_fila {
 		
 		Queue<String> queue = new LinkedList<String>();
 		
-		do {
+		while(true) {
+			
 			System.out.println("----------------------------------------------------------");
 			System.out.println("\t\t MENU ");
 			System.out.println("\n 1- Adicionar Cliente na Fila ");
@@ -26,17 +27,45 @@ public class exercício1_queue_fila {
 			System.out.println("----------------------------------------------------------");
 			
 			userChoice = read.nextInt();
+		
+			if(userChoice == 0) {
+				System.out.println("Programa Finalizado!");
+				read.close();
+				System.exit(0);
+			}
+			
 			switch(userChoice) {
 			case 1: 
-				System.out.println("Qual o nome do cliente? ");
+				read.nextLine(); // consome o \n
+				System.out.println("\nQual o nome do cliente? ");
 				clientName = read.nextLine();
 				queue.add(clientName);
-				System.out.println("\nClientes na fila: "+queue);
-				System.out.println(queue.poll());
+				System.out.println("\nFila: ");
+				for(String client : queue) {
+					System.out.println(client);
+					}
+				System.out.println("\nCliente adicionado!");
 				break;
-			};
+			case 2: 
+				System.out.println("\nLista de clientes na fila: ");
+				for(String client : queue) {
+					System.out.println(client);
+				}
+				break;
+			case 3: 
+				if(!queue.isEmpty()) {
+					queue.poll();
+					System.out.println("\nFila: ");
+					for(String client : queue) {
+						System.out.println(client);
+					}
+					System.out.println("\nO cliente foi chamado!");
+				}else {
+					System.out.println("A fila está vazia!");
+				}
+				break;
+			}
 		}
-		while(userChoice > 0);
 		
 	}
 
