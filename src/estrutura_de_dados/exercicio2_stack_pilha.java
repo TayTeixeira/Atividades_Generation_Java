@@ -40,23 +40,23 @@ while(true) {
 				bookName = read.nextLine();
 				stack.add(bookName);
 				System.out.println("\nPilha: ");
-				for(String client : stack) {
-					System.out.println(client);
+				for(String book : stack) {
+					System.out.println(book);
 					}
 				System.out.println("\nLivro adicionado!");
 				break;
 			case 2: 
 				System.out.println("\nLista de livros na pilha: ");
-				for(String client : stack) {
-					System.out.println(client);
+				for(String book : stack) {
+					System.out.println(book);
 				}
 				break;
 			case 3: 
 				if(!stack.isEmpty()) {
 					stack.pop();
 					System.out.println("\nPilha: ");
-					for(String client : stack) {
-						System.out.println(client);
+					for(String book : stack) {
+						System.out.println(book);
 					}
 					System.out.println("\nUm livro foi retirado da pilha!");
 				}else {
