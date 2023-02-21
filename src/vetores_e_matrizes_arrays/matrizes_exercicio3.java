@@ -9,7 +9,7 @@ public class matrizes_exercicio3 {
 
 		int [][] matrix = new int [3][3];
 		int [] mainDiagonal = new int[3];
-		int [] secondaryDiagonal = new int[3];
+		int [] secondaryDiagonal = new int[3];	
 		int mainDiagonalSum = 0, secondaryDiagonalSum = 0;
 		
 		Scanner read = new Scanner(System.in);
@@ -31,8 +31,16 @@ public class matrizes_exercicio3 {
 			}
 		}
 		
-		System.out.printf("Elementos da Diagonal Principal: \n %d %d %d\n", mainDiagonal[0], mainDiagonal[1], mainDiagonal[2]);
-		System.out.printf("Elementos da Diagonal Secundária: \n %d %d %d\n", secondaryDiagonal[0], secondaryDiagonal[1], secondaryDiagonal[2]);
+		System.out.println("Elementos da Diagonal Principal: ");
+		for(int i = 0; i < mainDiagonal.length; i++) {
+			System.out.printf("%d ", mainDiagonal[i]);
+		}
+		System.out.printf("\n");
+		System.out.println("Elementos da Diagonal Secundária: ");
+		for(int i = 0; i < secondaryDiagonal.length; i++) {
+			System.out.printf("%d ", secondaryDiagonal[i]);
+		}
+		System.out.printf("\n");
 		System.out.println("Soma dos Elementos da Diagonal Principal: "+mainDiagonalSum);
 		System.out.println("Soma dos Elementos da Diagonal Secundária: "+secondaryDiagonalSum);
 		
